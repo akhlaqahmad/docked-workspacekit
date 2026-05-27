@@ -9,6 +9,6 @@ let package = Package(
         .package(url: "https://github.com/akhlaqahmad/docked-appcore.git", branch: "main")
     ],
     targets: [
-        .target(name: "WorkspaceKit", dependencies: ["AppCore"])
+        .target(name: "WorkspaceKit", dependencies: [.product(name: "AppCore", package: "docked-appcore")])
     ]
 )
